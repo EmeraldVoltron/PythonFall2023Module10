@@ -5,6 +5,7 @@ last Edited: 10/25/23
 Unit Tests for a Class Assignment
 """
 
+
 class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):

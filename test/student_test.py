@@ -23,11 +23,11 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.Student.major, 'CIS')
 
     def test_object_created_all_attributes(self):
-        Student = s('Boggs', 'Abby', 'CIS', 3.97)
-        assert Student.last_name == 'Boggs'
-        assert Student.first_name == 'Abby'
-        assert Student.major == 'CIS'
-        assert Student.gpa == 3.97
+        student = s('Boggs', 'Abby', 'CIS', 3.97)
+        assert student.last_name == 'Boggs'
+        assert student.first_name == 'Abby'
+        assert student.major == 'CIS'
+        assert student.gpa == 3.97
 
     def test_student_str(self):
         self.assertEqual(str(self.Student), 'Boggs, Abby has major CIS with gpa: 3.97')
@@ -49,7 +49,6 @@ class MyTestCase(unittest.TestCase):
             student = s('Boggs', 'Abby', 'CIS', 5)
         with self.assertRaises(ValueError):
             student = s('Boggs', 'Abby', 'CIS', 4.5)
-
 
 
 if __name__ == '__main__':
